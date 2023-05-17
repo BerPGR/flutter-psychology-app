@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:psicology/screens/home_page.dart';
+import 'colors/palette.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "This is a psichology app - Girlfriend's idea",
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Palette.pale_purple,
+        textTheme: GoogleFonts.titilliumWebTextTheme(),
       ),
       home: HomePage(),
     );
