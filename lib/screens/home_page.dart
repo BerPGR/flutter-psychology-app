@@ -64,17 +64,18 @@ class _HomePageState extends State<HomePage> {
                     margin: EdgeInsets.only(top: 20),
                     height: 100,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Palette.flash_white,
-                        border:
-                            Border.all(width: 2, color: Palette.midnight_green),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(1),
-                              spreadRadius: 3,
-                              blurRadius: 7,
-                              offset: Offset(0, 5))
-                        ]),
+                      borderRadius: BorderRadius.circular(20),
+                      color: Palette.flash_white,
+                      border:
+                          Border.all(width: 2, color: Palette.midnight_green),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(1),
+                            spreadRadius: 3,
+                            blurRadius: 7,
+                            offset: Offset(0, 5))
+                      ],
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,8 +111,17 @@ class _HomePageState extends State<HomePage> {
                             height: 70,
                             width: 70,
                             decoration: BoxDecoration(
-                                color: Palette.caribbean_current,
-                                borderRadius: BorderRadius.circular(35)),
+                              color: Palette.caribbean_current,
+                              borderRadius: BorderRadius.circular(35),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  spreadRadius: 3,
+                                  blurRadius: 7,
+                                  offset: Offset(0, 2),
+                                )
+                              ],
+                            ),
                             child: IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
@@ -135,8 +145,17 @@ class _HomePageState extends State<HomePage> {
                             height: 70,
                             width: 70,
                             decoration: BoxDecoration(
-                                color: Palette.caribbean_current,
-                                borderRadius: BorderRadius.circular(35)),
+                              color: Palette.caribbean_current,
+                              borderRadius: BorderRadius.circular(35),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  spreadRadius: 3,
+                                  blurRadius: 7,
+                                  offset: Offset(0, 2),
+                                )
+                              ],
+                            ),
                             child: IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
@@ -160,8 +179,17 @@ class _HomePageState extends State<HomePage> {
                             height: 70,
                             width: 70,
                             decoration: BoxDecoration(
-                                color: Palette.caribbean_current,
-                                borderRadius: BorderRadius.circular(35)),
+                              color: Palette.caribbean_current,
+                              borderRadius: BorderRadius.circular(35),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(1),
+                                  spreadRadius: 3,
+                                  blurRadius: 7,
+                                  offset: Offset(0, 2),
+                                )
+                              ],
+                            ),
                             child: IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
@@ -181,7 +209,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ],
-                  )
+                  ),
+                  SizedBox(height: 24),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 18.0),
+                    child: Text(
+                        'Aqui estão alguns psicólogos que podem ser do seu interesse',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600)),
+                  ),
                 ],
               ),
             ),
