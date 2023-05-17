@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:psicology/colors/palette.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,8 +28,8 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
-                Icons.person_outline,
+              icon: const Icon(
+                CupertinoIcons.bell,
                 size: 28,
               ))
         ],
@@ -63,9 +65,16 @@ class _HomePageState extends State<HomePage> {
                     height: 100,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.transparent,
-                        border: Border.all(
-                            width: 2, color: Palette.midnight_green)),
+                        color: Palette.flash_white,
+                        border:
+                            Border.all(width: 2, color: Palette.midnight_green),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey.withOpacity(1),
+                              spreadRadius: 3,
+                              blurRadius: 7,
+                              offset: Offset(0, 5))
+                        ]),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -83,6 +92,96 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  /*
+                    This is a Row that contain some buttons
+                    to see what the user wants, like checking the chats,
+                    the psychologists and the configurations 
+                  */
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Palette.caribbean_current,
+                                borderRadius: BorderRadius.circular(35)),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  CupertinoIcons.chat_bubble,
+                                  size: 35,
+                                  color: Palette.flash_white,
+                                )),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8),
+                            child: Text("Chats",
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Palette.caribbean_current,
+                                borderRadius: BorderRadius.circular(35)),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.people_outline_outlined,
+                                  size: 35,
+                                  color: Palette.flash_white,
+                                )),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8),
+                            child: Text("Psicólogos",
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold)),
+                          )
+                        ],
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: Palette.caribbean_current,
+                                borderRadius: BorderRadius.circular(35)),
+                            child: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  CupertinoIcons.settings_solid,
+                                  size: 35,
+                                  color: Palette.flash_white,
+                                )),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 8),
+                            child: Text(
+                              "Config",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
