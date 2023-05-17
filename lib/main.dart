@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "This is a psichology app - Girlfriend's idea",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Palette.pale_purple,
+        scaffoldBackgroundColor: Palette.flash_white,
         textTheme: GoogleFonts.titilliumWebTextTheme(),
       ),
       home: HomePage(),
